@@ -1,2 +1,4 @@
 rootProject.name = "AndroidMvvmCoroutines"
 include ':app'
+include ':common'
+include ':login'

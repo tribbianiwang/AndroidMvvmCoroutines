@@ -1,5 +1,5 @@
 
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 apply from:'../dependencies.gradle'
 apply plugin: 'kotlin-android'
 
@@ -8,13 +8,13 @@ android {
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "com.wl.androidmvvmcoroutines"
         minSdkVersion 19
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
     }
 
     buildTypes {
@@ -33,7 +33,6 @@ android {
 }
 
 dependencies {
-    implementation project(path: ':common')
-    implementation project(path: ':login')
 
+    implementation project(path: ':common')
 }
