@@ -1,6 +1,6 @@
 package com.wl.login
 
-import com.fuusy.common.network.BaseResp
+import com.wl.common.network.BaseResp
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
 import retrofit2.http.POST

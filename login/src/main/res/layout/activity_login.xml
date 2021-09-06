@@ -6,10 +6,15 @@
 
     </data>
 
+    <LinearLayout
+        android:id="@+id/ll_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/color_ffffff"
+        android:id="@+id/cl_root"
         android:fitsSystemWindows="true">
 
         <include
@@ -98,4 +103,5 @@
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 </layout>

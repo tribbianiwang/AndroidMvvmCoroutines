@@ -1,7 +1,7 @@
 package com.wl.login
-import com.fuusy.common.base.BaseRepository
-import com.fuusy.common.network.RetrofitManager
-import com.fuusy.common.network.net.StateLiveData
+import com.wl.common.base.BaseRepository
+import com.wl.common.network.RetrofitManager
+import com.wl.common.network.net.StateLiveData
 
 class LoginRepo( private val service: LoginApi) : BaseRepository() {
 
@@ -9,13 +9,6 @@ class LoginRepo( private val service: LoginApi) : BaseRepository() {
         executeResp({ service.login(userName, password) }, stateLiveData)
     }
 
-    suspend fun register(
-        userName: String,
-        password: String,
-        rePassword: String,
-        stateLiveData: StateLiveData<LoginResp>
-    ) {
-        executeResp({ service.register(userName, password, rePassword) }, stateLiveData)
-    }
+
 
 }

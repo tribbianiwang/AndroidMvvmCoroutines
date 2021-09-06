@@ -6,15 +6,17 @@ import androidx.multidex.BuildConfig
 import androidx.multidex.MultiDex
 import androidx.paging.ExperimentalPagingApi
 import com.alibaba.android.arouter.launcher.ARouter
-import com.fuusy.common.loadsir.EmptyCallback
-import com.fuusy.common.loadsir.ErrorCallback
-import com.fuusy.common.loadsir.LoadingCallback
-import com.fuusy.common.utils.AppHelper
+import com.wl.common.loadsir.EmptyCallback
+import com.wl.common.loadsir.ErrorCallback
+import com.wl.common.loadsir.LoadingCallback
+import com.wl.common.utils.AppHelper
 import com.kingja.loadsir.core.LoadSir
 import com.wl.login.moduleLogin
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
+import org.koin.core.logger.Level
+import org.koin.core.logger.Logger
 
 
 @ExperimentalPagingApi
@@ -41,6 +43,8 @@ class MainApp : Application() {
     //koin
     private fun initKoin() {
         startKoin {
+
+
             androidLogger()
             androidContext(this@MainApp)
             modules(modules)
